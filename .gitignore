@@ -1,14 +1,56 @@
-# Python-generated files
+# Python bytecode / caches
 __pycache__/
-*.py[oc]
+*.py[cod]
+*$py.class
+
+# Build artifacts
 build/
 dist/
 wheels/
-*.egg-info
+*.egg-info/
 
 # Virtual environments
-.venv
+.venv/
+venv/
+.env/
 
 # Tool caches
 .pytest_cache/
 .ruff_cache/
+.mypy_cache/
+.pyright/
+.coverage
+htmlcov/
+
+# Local editor settings
+.vscode/
+.idea/
+
+# Local environment / secrets
+.env.*
+!.env.example
+
+# Local artifacts from experiments and integration tests
+artifacts/
+outputs/
+tmp/
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.pgm
+*.ppm
+*.ply
+*.glb
+*.gltf
+*.obj
+*.usd
+*.usdz
+
+# Model checkpoints / weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
