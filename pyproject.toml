@@ -22,6 +22,7 @@ dspic-server = "dspic.server:main"
 serve = [
     "pillow>=11.0",
     "torch>=2.0",
+    "torchvision>=0.17",
     "transformers>=4.57.1",
 ]
 
