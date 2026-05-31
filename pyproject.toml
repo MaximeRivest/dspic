@@ -1,0 +1,48 @@
+[project]
+name = "dspic"
+version = "0.1.0"
+description = "Python library for dspic."
+readme = "README.md"
+requires-python = ">=3.13"
+authors = [
+    { name = "Maxime Rivest", email = "mrive052@gmail.com" },
+    { name = "Aurelie Guisnet" },
+]
+dependencies = [
+    "fastapi>=0.115",
+    "httpx>=0.28",
+    "pydantic>=2.0",
+    "uvicorn>=0.30",
+]
+
+[project.scripts]
+dspic-server = "dspic.server:main"
+
+[project.optional-dependencies]
+serve = [
+    "pillow>=11.0",
+    "torch>=2.0",
+    "transformers>=4.57.1",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.11.0",
+]
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
