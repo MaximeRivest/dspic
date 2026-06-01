@@ -3,7 +3,7 @@ name = "dspic"
 version = "0.1.0"
 description = "Python library for dspic."
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.11"
 authors = [
     { name = "Maxime Rivest", email = "mrive052@gmail.com" },
     { name = "Aurelie Guisnet" },
@@ -38,7 +38,7 @@ dev = [
 
 [tool.ruff]
 line-length = 88
-target-version = "py313"
+target-version = "py311"
 src = ["src", "tests"]
 
 [tool.ruff.lint]

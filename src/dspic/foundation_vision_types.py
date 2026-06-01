@@ -9,7 +9,7 @@ boundary. Model-specific details should live in adapter code or `provider_data`.
 from __future__ import annotations
 
 from collections.abc import Mapping
-from typing import Annotated, Any, Literal
+from typing import Annotated, Any, Literal, TypeAlias
 
 import pydantic
 from pydantic import BaseModel, ConfigDict, Field, model_validator
@@ -147,7 +147,7 @@ class PointCloudRef(SourceRef):
     coordinate_space: str | None = None
 
 
-type CoordinateSpace = Literal[
+CoordinateSpace: TypeAlias = Literal[
     "pixel",
     "normalized",
     "camera",
@@ -416,7 +416,7 @@ VisionOutput = Annotated[
 ]
 
 
-type VisionTask = Literal[
+VisionTask: TypeAlias = Literal[
     "classify",
     "embed",
     "detect",
