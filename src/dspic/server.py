@@ -217,6 +217,7 @@ class SAM21Worker(VisionWorker):
             processor_kwargs["input_boxes"] = [boxes]
 
         inputs = self.processor(**processor_kwargs).to(self.device)
+        inputs["pixel_values"] = inputs["pixel_values"].to(self.dtype)
         with torch.no_grad():
             outputs = self.model(
                 **inputs,
